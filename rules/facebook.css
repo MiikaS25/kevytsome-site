@@ -1,0 +1,67 @@
+/*
+ * Koukuton – Facebook rules (CSS). Stable signals only: roles, aria-labels and
+ * marks set by facebook.js, never the service's random class names.
+ */
+
+/* Short videos are gone, so facebook.js spreads the other tabs evenly. Each tab's
+   own underline would leave gaps, so they go. The labels are in English even on a
+   Finnish page: "reels, 4 of 6". */
+[role="tablist"] > [role="tab"] > [data-type="text"] {
+  visibility: hidden !important;
+}
+
+[role="tablist"] > [role="tab"] > * {
+  background-color: transparent !important;
+}
+
+[role="tablist"],
+[role="tablist"] > [role="tab"] {
+  background-color: var(--koukuton-surface, #ffffff) !important;
+}
+
+[role="tab"][aria-label^="reels"],
+[role="tab"][aria-label^="watch"],
+[role="tab"][aria-label^="video"],
+[role="tab"][aria-label^="messages"],
+[data-koukuton-hide-marketplace] [role="tab"][aria-label^="marketplace"] {
+  display: none !important;
+}
+
+/* In the menu: the tile keeps its place, the others are laid out around it. */
+[data-koukuton-tile-off] {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* The feed ends here: nothing after the last post, so no more pages load. */
+[data-koukuton-feed-end] ~ * {
+  display: none !important;
+}
+
+/* No room left below the last post: the list and its screen fill the window
+   otherwise, in the page's gray. */
+[data-pull-to-refresh-action-id]:has([data-koukuton-feed-end]),
+[data-screen-id]:has([data-koukuton-feed-end]) {
+  height: auto !important;
+  min-height: 0 !important;
+  background-color: var(--koukuton-surface, #ffffff) !important;
+}
+
+[data-koukuton-end-message] {
+  padding: 40px 32px 64px 32px;
+  text-align: center;
+  font: -apple-system-body;
+}
+
+[data-koukuton-end-message] h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+[data-koukuton-end-message] p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #737373;
+}

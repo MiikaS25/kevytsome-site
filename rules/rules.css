@@ -1,0 +1,161 @@
+/*
+ * Koukuton – hiding rules (CSS)
+ * Injected at document start into every Instagram page.
+ *
+ * Rules for selectors:
+ *   - Use stable signals only: href values, aria-label (Finnish AND English),
+ *     role attributes, DOM structure.
+ *   - NEVER use Instagram's random class names (e.g. .x1lliihq).
+ */
+
+/* Anything rules.js has marked for hiding. */
+[data-koukuton-hidden] {
+  display: none !important;
+}
+
+/* Unwanted feed post: must stay in the layout, see hideUnwantedPosts in rules.js. */
+[data-koukuton-collapsed] {
+  display: block !important;
+  flex: none !important;
+  height: 1px !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/*
+ * "Olet ajan tasalla" end-of-feed message (inserted by rules.js), modelled on
+ * Instagram's own "You're all caught up". Leaves room for the bottom tab bar.
+ */
+[data-koukuton-caught-up] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 32px 160px 32px;
+  border-top: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+[data-koukuton-caught-up] h2 {
+  margin: 20px 0 8px 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+[data-koukuton-caught-up] p {
+  margin: 0;
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #737373;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-koukuton-caught-up] p {
+    color: #a8a8a8;
+  }
+}
+
+/* The same message after the one reel opened from a DM (dark viewer). */
+[data-koukuton-caught-up="reelEnd"] {
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 32px;
+  border-top: none;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+[data-koukuton-caught-up="reelEnd"] h2 {
+  color: #ffffff;
+}
+
+[data-koukuton-caught-up="reelEnd"] p {
+  color: #a8a8a8;
+}
+
+/* See fillReelWidth in rules.js. */
+[data-koukuton-reel-fill] {
+  flex: 1 1 100% !important;
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: auto !important;
+}
+
+[data-koukuton-reel-back] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  padding: 10px 20px 10px 14px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.16);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Messages-only mode: covers the inbox's top-left back arrow (rules.js). */
+[data-koukuton-back-cover] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 44px;
+  z-index: 2147483647;
+  background-color: Canvas;
+}
+
+/*
+ * Search page: Instagram draws the search list above the bottom tab bar.
+ * Keep the tab bar (marked by rules.js) in front of it.
+ */
+[data-koukuton-search-tab-bar] {
+  z-index: 20 !important;
+}
+
+/* Visible but not tappable (e.g. the "Seurataan" title on Home). */
+[data-koukuton-inert] {
+  pointer-events: none !important;
+}
+
+/*
+ * Landing page: "Kirjaudu sisään" becomes a big primary button in the same
+ * style as Instagram's hidden "Avaa Instagram" button; "tai rekisteröidy"
+ * stays below it as a small centred line. Marked by rules.js.
+ */
+[data-koukuton-login-row] {
+  display: block !important;
+  text-align: center !important;
+}
+
+[data-koukuton-login-row] > *:not([data-koukuton-primary-login]) {
+  display: inline-block !important;
+  margin: 0 2px !important;
+}
+
+[data-koukuton-primary-login] {
+  display: block !important;
+  width: calc(100vw - 80px) !important;
+  max-width: 400px !important;
+  height: 44px !important;
+  margin: 0 auto 16px auto !important;
+  padding: 0 16px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background-color: #4a5df9 !important;
+}
+
+[data-koukuton-primary-login],
+[data-koukuton-primary-login] * {
+  color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}

@@ -1,0 +1,13 @@
+/*
+ * Koukuton – shared rules (CSS) for sites other than Instagram.
+ * Elements are marked by common.js and the site's own script.
+ * Stable signals only, never a service's random class names.
+ */
+[data-koukuton-hidden] {
+  display: none !important;
+}
+
+/* Keeps its place in the layout but can't be tapped. */
+[data-koukuton-inert] {
+  pointer-events: none !important;
+}

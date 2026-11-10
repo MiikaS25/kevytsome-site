@@ -1,0 +1,52 @@
+/*
+ * Koukuton – LinkedIn rules (CSS). Stable signals only: tag names, data-view-name
+ * and marks set by linkedin.js, never the service's random class names.
+ */
+
+/* The page is laid out 18 px wider than the screen, which cuts off the messages
+   icon and the right edge of every post. */
+:has(> #workspace),
+:has(> footer) {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+/* The search box in the top bar gives way, so the icons next to it fit. */
+footer div:has(input):not(:has(nav)):not(:has(a)) {
+  width: calc(100vw - 140px) !important;
+  min-width: 0 !important;
+  flex: none !important;
+}
+
+footer input {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* The feed's own spinner has nothing left to wait for after the end. */
+[data-koukuton-feed-ended] :has(> [data-view-name="main-feed-pagination-loading-spinner"]) {
+  display: none !important;
+}
+
+[data-koukuton-end-message] {
+  padding: 40px 32px 64px 32px;
+  text-align: center;
+  font: -apple-system-body;
+}
+
+[data-koukuton-end-message] h2 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+[data-koukuton-end-message] p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #737373;
+}
+
+/* Google's One Tap panel on the login page. */
+#credential_picker_container {
+  display: none !important;
+}
