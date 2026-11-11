@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>kevytsome – some ilman koukkuja</title>
-<meta name="description" content="kevytsome on iPhone-sovellus, joka näyttää seuraamiesi ihmisten julkaisut, tarinat ja viestit ilman videosyötettä, ehdotuksia ja mainoksia. Ei palvelinta, ei seurantaa.">
+<meta name="description" content="kevytsome on iPhone-sovellus, joka avaa Instagramin, Facebookin ja LinkedInin ilman videosyötettä, ehdotuksia ja mainoksia. Ei palvelinta, ei seurantaa.">
 <meta property="og:title" content="kevytsome – some ilman koukkuja">
-<meta property="og:description" content="Lopeta skrollaaminen, vapauta aikaa elämälle! Kaverien julkaisut, tarinat ja viestit ilman videosyötettä, ehdotuksia ja mainoksia.">
+<meta property="og:description" content="Lopeta skrollaaminen, vapauta aikaa elämälle! Instagram, Facebook ja LinkedIn ilman videosyötettä, ehdotuksia ja mainoksia.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fi_FI">
 <meta property="og:url" content="https://kevytsome.fi/">
@@ -31,6 +31,7 @@
       <img class="logo-dark" src="img/logo-dark-bg.svg" alt="" width="166" height="30">
     </a>
     <nav class="site-nav" aria-label="Päävalikko">
+      <a class="hide-sm" href="#palvelut">Palvelut</a>
       <a class="hide-sm" href="#ominaisuudet">Ominaisuudet</a>
       <a class="hide-sm" href="#yksityisyys">Yksityisyys</a>
       <a class="hide-sm" href="#hinta">Hinta</a>
@@ -48,7 +49,7 @@
     <div>
       <div class="eyebrow">Tulossa iPhonelle</div>
       <h1>Lopeta <span class="hl">skrollaaminen</span>, vapauta aikaa elämälle!</h1>
-      <p class="lead">kevytsome on some ilman koukkuja. Näet seuraamiesi ihmisten julkaisut, tarinat ja viestit, ja siinä se.</p>
+      <p class="lead">kevytsome avaa Instagramin, Facebookin ja LinkedInin ilman koukkuja. Näet seuraamiesi ihmisten julkaisut ja viestit, ja siinä se.</p>
       <div class="actions">
         <a class="btn" href="mailto:summanenmiika@gmail.com?subject=Ilmoita%2C%20kun%20kevytsome%20julkaistaan&amp;body=Hei%2C%20haluan%20tiedon%2C%20kun%20kevytsome%20on%20App%20Storessa.">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z M3.8 7l8.2 6.3L20.2 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -59,51 +60,123 @@
       <div class="facts"><span>iPhone</span><span>Suomeksi</span><span>4,99 €/kk tai 39,99 €/v</span><span>Ei palvelinta, ei seurantaa</span></div>
     </div>
 
-    <div class="phone-stage" aria-hidden="true">
-      <svg class="big-sun sun" viewBox="-14 -14 28 28"><circle r="6.5" fill="#C8F04A"/><path class="rays" d="M0 -6Q6 -6.5 6 0Q5.5 6 0 6Q-6 5.5 -5.5 0Q-5 -6 .5 -6M.3 -9 0 -12.8M6.6 -6.2 9 -8.9M9.2 .3 12.8 0M6.4 6.6 8.8 9.2M-.2 9.2 .3 12.7M-6.5 6.3 -9.1 8.8M-9 -.4 -12.6 0M-6.3 -6.5 -9 -9" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="phone">
+    <div class="phone-stage">
+      <!-- The three hooks come off with a tap. Plain checkboxes, no script. -->
+      <input class="hook-box" type="checkbox" id="hook-ad" aria-label="Irrota koukku mainoksesta">
+      <input class="hook-box" type="checkbox" id="hook-video" aria-label="Irrota koukku videosta">
+      <input class="hook-box" type="checkbox" id="hook-tab" aria-label="Irrota koukku videosyötteestä">
+      <svg class="big-sun sun" viewBox="-14 -14 28 28" aria-hidden="true"><circle r="6.5" fill="#C8F04A"/><path class="rays" d="M0 -6Q6 -6.5 6 0Q5.5 6 0 6Q-6 5.5 -5.5 0Q-5 -6 .5 -6" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path class="rays spin" d="M.3 -9 0 -12.8M6.6 -6.2 9 -8.9M9.2 .3 12.8 0M6.4 6.6 8.8 9.2M-.2 9.2 .3 12.7M-6.5 6.3 -9.1 8.8M-9 -.4 -12.6 0M-6.3 -6.5 -9 -9" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="phone" aria-hidden="true">
         <div class="notch"></div>
         <div class="screen">
+          <div class="stories"><i></i><i></i><i></i><i></i></div>
           <div class="post">
             <div class="who"><span class="avatar"></span><span class="name"></span></div>
             <div class="photo">
               <svg viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice"><rect width="160" height="100" fill="#ECEEE6"/><circle cx="120" cy="28" r="11" fill="#C8F04A" stroke="#141414" stroke-width="1.8"/><path d="M0 58Q36 40 76 52T160 46V100H0Z" fill="#B7BDAB"/><path d="M0 70H160V100H0Z" fill="#D5DAD3"/><path d="M52 70h44v3H52z" fill="#8C8C88"/><path d="M58 73v12M90 73v12" stroke="#8C8C88" stroke-width="2"/></svg>
             </div>
-            <span class="caption"></span>
           </div>
-          <div class="post">
-            <div class="who"><span class="avatar a2"></span><span class="name" style="width:34%"></span></div>
-            <div class="photo">
-              <svg viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice"><rect width="160" height="100" fill="#E6E4DC"/><path d="M0 100V62l18-22 16 20 14-28 18 30 14-18 18 24 16-30 20 26 26-20v76Z" fill="#9EA494"/><path d="M0 100V76l24-12 30 14 34-10 36 12 36-8v28Z" fill="#7F8676"/></svg>
-            </div>
-          </div>
+          <label class="piece piece-ad" for="hook-ad">
+            <span class="post ad"><span class="who"><span class="avatar a2"></span><span class="name" style="width:30%"></span><span class="tag">Mainos</span></span><span class="flat"></span></span>
+            <span class="hook"><svg viewBox="-14 -2 22 30"><path d="M0 4v13c0 9-11 9-11 0v-5m0 0 3.6 3.4" fill="none" stroke="#141414" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="2" r="1.9" fill="none" stroke="#141414" stroke-width="2"/></svg></span>
+          </label>
+          <label class="piece piece-video" for="hook-video">
+            <span class="video"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="#FAFAF7"/></svg></span>
+            <span class="hook"><svg viewBox="-14 -2 22 30"><path d="M0 4v13c0 9-11 9-11 0v-5m0 0 3.6 3.4" fill="none" stroke="#141414" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="2" r="1.9" fill="none" stroke="#141414" stroke-width="2"/></svg></span>
+          </label>
           <div class="done">
             <div class="done-ring">
-              <svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M176 10C146-2 40 0 16 16-4 30 30 58 100 56c64-2 96-16 92-32-3-12-30-18-60-19" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+              <svg viewBox="0 0 200 60" preserveAspectRatio="none"><path pathLength="1" d="M176 10C146-2 40 0 16 16-4 30 30 58 100 56c64-2 96-16 92-32-3-12-30-18-60-19" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
               <b>Olet ajan tasalla.</b>
               <span>Mitään ei jäänyt näkemättä.</span>
             </div>
           </div>
+          <div class="tabs">
+            <svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z" fill="#141414"/></svg>
+            <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="#141414" stroke-width="2.4"/><path d="m15 15 5 5" stroke="#141414" stroke-width="2.4" stroke-linecap="round"/></svg>
+            <label class="piece piece-tab" for="hook-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="#141414"/><path d="M10 9v6l5-3z" fill="#FAFAF7"/></svg><span class="hook"><svg viewBox="-14 -2 22 30"><path d="M0 4v13c0 9-11 9-11 0v-5m0 0 3.6 3.4" fill="none" stroke="#141414" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="0" cy="2" r="1.9" fill="none" stroke="#141414" stroke-width="2"/></svg></span></label>
+            <svg viewBox="0 0 24 24"><path d="M3 11 21 4l-6 17-3-7z" fill="#141414"/></svg>
+            <i class="me"></i>
+          </div>
         </div>
+      </div>
+      <p class="hook-hint"><span class="before">Napauta koukkuja, niin ne irtoavat.</span><span class="after">Tältä some näyttää kevytsomessa.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Services -->
+<section id="palvelut">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Kolme somea, yksi paikka</div>
+      <h2>Kaikki somesi <span class="hl">yhdessä paikassa</span>.</h2>
+      <p>Avaat palvelut kevytsomen kotinäkymästä omilla tunnuksillasi. Mainokset ja videosyötteet jäävät pois, ja näet, paljonko aikaa kuhunkin kuluu.</p>
+    </div>
+    <div class="hub">
+      <div class="services">
+        <div class="service reveal">
+          <h3>Instagram</h3>
+          <p>Ei videosyötettä, Tutki-sivua, ehdotuksia eikä mainoksia. Syöte, tarinat ja viestit toimivat kuten ennenkin.</p>
+        </div>
+        <div class="service reveal">
+          <h3>Facebook</h3>
+          <p>Ei mainoksia, lyhytvideoita eikä ehdotuksia ryhmistä ja sivuista, joihin et kuulu. Syöte loppuu, kun uudet julkaisut on nähty.</p>
+        </div>
+        <div class="service reveal">
+          <h3>LinkedIn</h3>
+          <p>Ei mainostettuja julkaisuja, ehdotuksia eikä videoita syötteessä. Viestit ja oma verkosto pysyvät.</p>
+        </div>
+      </div>
+      <div class="today reveal" aria-label="Esimerkki kotinäkymän ruutuajasta">
+        <div class="eyebrow">Tänään somessa</div>
+        <div class="total">24 min <small>/ 1 h</small></div>
+        <div class="bar big"><i style="--w:40%"></i></div>
+        <div class="row"><span>Instagram</span><span>14 min</span></div><div class="bar"><i style="--w:58%"></i></div>
+        <div class="row"><span>Facebook</span><span>6 min</span></div><div class="bar"><i style="--w:25%"></i></div>
+        <div class="row"><span>LinkedIn</span><span>4 min</span></div><div class="bar"><i style="--w:17%"></i></div>
+        <p>Yksi aikaraja koko somelle, ja aika näkyy palveluittain.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Stays / goes -->
+<!-- 3. Not your fault (dark band) -->
+<section class="band" id="ei-sinun-vikasi">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Ei se ole sinun vikasi</div>
+      <h2>Vastassa on muutama tuhat insinööriä.</h2>
+      <p style="margin-top:1.2rem">Somepalvelut on rakennettu pitämään sinut ruudun ääressä mahdollisimman pitkään, ja siinä ne ovat hyviä. Yksi ihminen ei pärjää sille pelkällä tahdonvoimalla, eikä tarvitsekaan.</p>
+      <p>kevytsome ottaa koukut pois. Jäljelle jää se, minkä takia someen alun perin tulit.</p>
+    </div>
+    <div class="night-wrap">
+      <svg class="night" viewBox="0 0 360 280" role="img" aria-label="Kolme kerrostaloa illalla. Monessa ikkunassa loistaa puhelimen ruutu, ja yksi niistä on sinun.">
+        <circle class="star" cx="96" cy="64" r="1.6"/><circle class="star" cx="78" cy="22" r="1.3"/><circle class="star" cx="300" cy="18" r="1.6"/><circle class="star" cx="336" cy="74" r="1.2"/>
+        <path class="moon" transform="translate(-282 -4)" d="M318 36a13 13 0 1 0 14 16 10.5 10.5 0 0 1-14-16z"/>
+        <rect class="house" x="11" y="124" width="100" height="146"/><path class="door" d="M52.0 270v-18a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v18"/><rect class="roof" x="31" y="110" width="12" height="14"/><rect class="w lit" x="24.5" y="136.5" width="17" height="19" rx="2" style="--d:0.79s;--o:0.83"/><path class="pane" d="M33.0 136.5v19"/><rect class="w lit" x="52.5" y="136.5" width="17" height="19" rx="2" style="--d:1.79s;--o:0.68"/><path class="pane" d="M61.0 136.5v19"/><rect class="w lit" x="80.5" y="136.5" width="17" height="19" rx="2" style="--d:1.72s;--o:0.52"/><path class="pane" d="M89.0 136.5v19"/><rect class="w lit" x="24.5" y="164.5" width="17" height="19" rx="2" style="--d:0.58s;--o:0.55"/><path class="pane" d="M33.0 164.5v19"/><rect class="w lit" x="52.5" y="164.5" width="17" height="19" rx="2" style="--d:2.55s;--o:0.56"/><path class="pane" d="M61.0 164.5v19"/><rect class="w lit" x="80.5" y="164.5" width="17" height="19" rx="2" style="--d:2.03s;--o:0.97"/><path class="pane" d="M89.0 164.5v19"/><rect class="w lit" x="24.5" y="192.5" width="17" height="19" rx="2" style="--d:1.43s;--o:0.99"/><path class="pane" d="M33.0 192.5v19"/><rect class="w lit" x="52.5" y="192.5" width="17" height="19" rx="2" style="--d:2.63s;--o:0.64"/><path class="pane" d="M61.0 192.5v19"/><rect class="w lit" x="80.5" y="192.5" width="17" height="19" rx="2" style="--d:0.71s;--o:0.65"/><path class="pane" d="M89.0 192.5v19"/><rect class="w" x="24.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M33.0 220.5v19"/><rect class="w" x="52.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M61.0 220.5v19"/><rect class="w lit" x="80.5" y="220.5" width="17" height="19" rx="2" style="--d:0.55s;--o:0.6"/><path class="pane" d="M89.0 220.5v19"/><rect class="house" x="116" y="40" width="128" height="230"/><path class="door" d="M171.0 270v-18a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v18"/><path class="roof" d="M144 40v-30m-7 8h14m-5-6h-4"/><rect class="roof" x="182" y="28" width="32" height="12"/><rect class="w" x="129.5" y="52.5" width="17" height="19" rx="2"/><path class="pane" d="M138.0 52.5v19"/><rect class="w lit" x="157.5" y="52.5" width="17" height="19" rx="2" style="--d:1.58s;--o:0.65"/><path class="pane" d="M166.0 52.5v19"/><rect class="w" x="185.5" y="52.5" width="17" height="19" rx="2"/><path class="pane" d="M194.0 52.5v19"/><rect class="w mine" x="213.5" y="52.5" width="17" height="19" rx="2" style="--d:3.4s;--o:1"/><path class="pane" d="M222.0 52.5v19"/><rect class="w lit" x="129.5" y="80.5" width="17" height="19" rx="2" style="--d:1.77s;--o:0.94"/><path class="pane" d="M138.0 80.5v19"/><rect class="w" x="157.5" y="80.5" width="17" height="19" rx="2"/><path class="pane" d="M166.0 80.5v19"/><rect class="w lit" x="185.5" y="80.5" width="17" height="19" rx="2" style="--d:1.49s;--o:0.88"/><path class="pane" d="M194.0 80.5v19"/><rect class="w lit" x="213.5" y="80.5" width="17" height="19" rx="2" style="--d:1.67s;--o:0.52"/><path class="pane" d="M222.0 80.5v19"/><rect class="w" x="129.5" y="108.5" width="17" height="19" rx="2"/><path class="pane" d="M138.0 108.5v19"/><rect class="w" x="157.5" y="108.5" width="17" height="19" rx="2"/><path class="pane" d="M166.0 108.5v19"/><rect class="w lit" x="185.5" y="108.5" width="17" height="19" rx="2" style="--d:1.91s;--o:0.73"/><path class="pane" d="M194.0 108.5v19"/><rect class="w" x="213.5" y="108.5" width="17" height="19" rx="2"/><path class="pane" d="M222.0 108.5v19"/><rect class="w" x="129.5" y="136.5" width="17" height="19" rx="2"/><path class="pane" d="M138.0 136.5v19"/><rect class="w" x="157.5" y="136.5" width="17" height="19" rx="2"/><path class="pane" d="M166.0 136.5v19"/><rect class="w lit" x="185.5" y="136.5" width="17" height="19" rx="2" style="--d:1.4s;--o:0.83"/><path class="pane" d="M194.0 136.5v19"/><rect class="w lit" x="213.5" y="136.5" width="17" height="19" rx="2" style="--d:1.6s;--o:0.58"/><path class="pane" d="M222.0 136.5v19"/><rect class="w lit" x="129.5" y="164.5" width="17" height="19" rx="2" style="--d:0.55s;--o:0.88"/><path class="pane" d="M138.0 164.5v19"/><rect class="w lit" x="157.5" y="164.5" width="17" height="19" rx="2" style="--d:1.04s;--o:0.7"/><path class="pane" d="M166.0 164.5v19"/><rect class="w" x="185.5" y="164.5" width="17" height="19" rx="2"/><path class="pane" d="M194.0 164.5v19"/><rect class="w lit" x="213.5" y="164.5" width="17" height="19" rx="2" style="--d:2.7s;--o:0.91"/><path class="pane" d="M222.0 164.5v19"/><rect class="w" x="129.5" y="192.5" width="17" height="19" rx="2"/><path class="pane" d="M138.0 192.5v19"/><rect class="w lit" x="157.5" y="192.5" width="17" height="19" rx="2" style="--d:2.7s;--o:0.98"/><path class="pane" d="M166.0 192.5v19"/><rect class="w lit" x="185.5" y="192.5" width="17" height="19" rx="2" style="--d:0.86s;--o:0.62"/><path class="pane" d="M194.0 192.5v19"/><rect class="w lit" x="213.5" y="192.5" width="17" height="19" rx="2" style="--d:1.66s;--o:0.79"/><path class="pane" d="M222.0 192.5v19"/><rect class="w lit" x="129.5" y="220.5" width="17" height="19" rx="2" style="--d:0.41s;--o:0.71"/><path class="pane" d="M138.0 220.5v19"/><rect class="w lit" x="157.5" y="220.5" width="17" height="19" rx="2" style="--d:1.87s;--o:0.98"/><path class="pane" d="M166.0 220.5v19"/><rect class="w" x="185.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M194.0 220.5v19"/><rect class="w" x="213.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M222.0 220.5v19"/><rect class="house" x="249" y="96" width="100" height="174"/><path class="door" d="M290.0 270v-18a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v18"/><path class="roof" d="M327 96v-20m-6 6h12m-4-5h-4"/><rect class="w" x="262.5" y="108.5" width="17" height="19" rx="2"/><path class="pane" d="M271.0 108.5v19"/><rect class="w lit" x="290.5" y="108.5" width="17" height="19" rx="2" style="--d:1.44s;--o:0.55"/><path class="pane" d="M299.0 108.5v19"/><rect class="w" x="318.5" y="108.5" width="17" height="19" rx="2"/><path class="pane" d="M327.0 108.5v19"/><rect class="w lit" x="262.5" y="136.5" width="17" height="19" rx="2" style="--d:0.82s;--o:0.67"/><path class="pane" d="M271.0 136.5v19"/><rect class="w lit" x="290.5" y="136.5" width="17" height="19" rx="2" style="--d:0.4s;--o:0.58"/><path class="pane" d="M299.0 136.5v19"/><rect class="w lit" x="318.5" y="136.5" width="17" height="19" rx="2" style="--d:1.35s;--o:0.51"/><path class="pane" d="M327.0 136.5v19"/><rect class="w" x="262.5" y="164.5" width="17" height="19" rx="2"/><path class="pane" d="M271.0 164.5v19"/><rect class="w lit" x="290.5" y="164.5" width="17" height="19" rx="2" style="--d:1.3s;--o:0.68"/><path class="pane" d="M299.0 164.5v19"/><rect class="w lit" x="318.5" y="164.5" width="17" height="19" rx="2" style="--d:2.61s;--o:1.0"/><path class="pane" d="M327.0 164.5v19"/><rect class="w lit" x="262.5" y="192.5" width="17" height="19" rx="2" style="--d:1.66s;--o:0.54"/><path class="pane" d="M271.0 192.5v19"/><rect class="w lit" x="290.5" y="192.5" width="17" height="19" rx="2" style="--d:1.29s;--o:0.63"/><path class="pane" d="M299.0 192.5v19"/><rect class="w" x="318.5" y="192.5" width="17" height="19" rx="2"/><path class="pane" d="M327.0 192.5v19"/><rect class="w" x="262.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M271.0 220.5v19"/><rect class="w lit" x="290.5" y="220.5" width="17" height="19" rx="2" style="--d:0.47s;--o:0.76"/><path class="pane" d="M299.0 220.5v19"/><rect class="w" x="318.5" y="220.5" width="17" height="19" rx="2"/><path class="pane" d="M327.0 220.5v19"/>
+        <path class="street" d="M2 270h356"/>
+        <g class="you"><path d="M270 62h-16m0 0 5-4.5m-5 4.5 5 4.5"/><text x="275" y="67.5">sinä</text></g>
+      </svg>
+      <p class="night-note">Moni skrollaa iltaisin enemmän kuin haluaisi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Stays / goes -->
 <section id="mita-jaa">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="eyebrow">Mitä jää, mitä lähtee</div>
       <h2>Kaverit jäävät. Koukut lähtevät.</h2>
       <p>kevytsome näyttää somen sellaisena kuin se joskus oli: ihmisiä, joita oikeasti seuraat.</p>
     </div>
-    <div class="split">
+    <div class="split reveal">
       <div class="panel">
         <h3>Jää</h3>
         <ul class="list">
           <li><svg class="check" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2.6c6 .2 10.4 4.6 10.3 10.6-.1 6-4.7 10.4-10.6 10.2C6.8 23.2 2.5 18.8 2.6 12.9 2.8 7 7.2 2.4 13 2.6z" fill="#C8F04A" stroke="#141414" stroke-width="1.8"/><path d="M8.2 13.6l3.4 3.3 6.8-7.6" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Seuraamiesi ihmisten julkaisut<small>Uusimmat ensin, ilman algoritmin arvontaa.</small></span></li>
+            <span>Seuraamiesi ihmisten julkaisut<small>Syöte loppuu, kun olet nähnyt uudet.</small></span></li>
           <li><svg class="check" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2.6c6 .2 10.4 4.6 10.3 10.6-.1 6-4.7 10.4-10.6 10.2C6.8 23.2 2.5 18.8 2.6 12.9 2.8 7 7.2 2.4 13 2.6z" fill="#C8F04A" stroke="#141414" stroke-width="1.8"/><path d="M8.2 13.6l3.4 3.3 6.8-7.6" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span>Tarinat</span></li>
           <li><svg class="check" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2.6c6 .2 10.4 4.6 10.3 10.6-.1 6-4.7 10.4-10.6 10.2C6.8 23.2 2.5 18.8 2.6 12.9 2.8 7 7.2 2.4 13 2.6z" fill="#C8F04A" stroke="#141414" stroke-width="1.8"/><path d="M8.2 13.6l3.4 3.3 6.8-7.6" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -118,7 +191,7 @@
         <h3>Lähtee</h3>
         <ul class="list gone">
           <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Videosyöte</span></li>
-          <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Tutki-sivu</span></li>
+          <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Lyhytvideot ja Tutki-sivu</span></li>
           <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Ehdotetut julkaisut</span></li>
           <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Ehdotetut tilit</span></li>
           <li><svg class="x" viewBox="0 0 26 26" aria-hidden="true"><path d="M7 7.5l12 11.2M18.6 6.8 7.4 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span class="strike">Mainokset</span></li>
@@ -137,8 +210,8 @@
       <h2>Syötteellä on vihdoin loppu.</h2>
       <p style="margin-top:1.2rem">Kun olet nähnyt seuraamiesi ihmisten uudet julkaisut, kevytsome sanoo sen suoraan. Ei enää vielä yhtä videota, eikä tunnetta, että jotain jäi kesken.</p>
     </div>
-    <div class="caught">
-      <svg class="ring" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><path d="M352 30C296 2 74 4 30 46-10 86 60 192 210 188c128-4 186-50 176-104-8-42-70-62-150-64" fill="none" stroke="#C8F04A" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+    <div class="caught reveal">
+      <svg class="ring" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M352 30C296 2 74 4 30 46-10 86 60 192 210 188c128-4 186-50 176-104-8-42-70-62-150-64" fill="none" stroke="#C8F04A" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
       <strong>Olet ajan tasalla.</strong>
       <span>Mitään ei jäänyt näkemättä.</span>
     </div>
@@ -148,17 +221,23 @@
 <!-- 4. Controls -->
 <section id="ominaisuudet">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="eyebrow">Sinä päätät</div>
       <h2>Sinä päätät, milloin riittää.</h2>
       <p>Säädä kevytsome itsesi näköiseksi. Kaikki on valinnaista, eikä mikään asetus syyllistä.</p>
     </div>
-    <div class="cards">
+    <div class="cards reveal">
       <div class="card">
         <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M22 11c7.2-.2 12.8 5.6 12.6 12.8-.2 7-5.9 12.5-12.9 12.3-7.1-.1-12.5-5.8-12.3-12.8.2-6.9 5.6-12.1 12.6-12.3z" fill="#C8F04A" stroke-width="2.2"/><path class="ink" d="M22 17.5v6.6l4.6 2.9M18 6.2h8.2M22 6.4V11" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>Päivittäinen aikaraja</h3>
-        <p>Valitse, paljonko somea päivään mahtuu. Kun aika on käytetty, kevytsome jää odottamaan huomista.</p>
+        <p>Valitse, paljonko somea päivään mahtuu. Raja koskee kaikkia palveluita yhteensä, ja kun aika on käytetty, kevytsome jää odottamaan huomista.</p>
         <span class="quote">”Päivän some on käytetty. Huomenna taas.”</span>
+      </div>
+      <div class="card">
+        <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M9 15c0-3.300 2.700-6 6-6h14c3.300 0 6 2.700 6 6v14c0 3.300-2.700 6-6 6H15c-3.300 0-6-2.700-6-6z" fill="#C8F04A" stroke-width="2.200" stroke-linejoin="round"/><path class="ink" d="M15.500 27.500v-5M22 27.500v-11M28.500 27.500v-8" fill="none" stroke-width="2.600" stroke-linecap="round"/></svg>
+        <h3>Ruutuaika palveluittain</h3>
+        <p>Kotinäkymä näyttää, paljonko aikaa tänään ja viime viikolla kului mihinkin palveluun. Pelkkä luku, ei saarnaa.</p>
+        <span class="quote">”14 minuuttia somessa. Vielä hetki vai riittääkö tältä erää?”</span>
       </div>
       <div class="card">
         <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M27.5 7.5C19.8 8.6 14.3 15.3 14.8 23c.5 8 7.4 14.1 15.4 13.6 3.4-.2 6.5-1.6 8.8-3.8-8.8.6-16.4-6.1-16.6-14.9-.1-4.1 1.8-7.8 5.1-10.4z" fill="#C8F04A" stroke-width="2.2" stroke-linejoin="round"/><path class="ink" d="M8.5 12.5v4M6.5 14.5h4M33 19.5v3M31.5 21h3" fill="none" stroke-width="2" stroke-linecap="round"/></svg>
@@ -181,17 +260,17 @@
       <div class="card">
         <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M9 12.5c0-2 1.5-3.5 3.5-3.5h19.5c2 0 3.5 1.6 3.5 3.5v13c0 2-1.5 3.6-3.5 3.6H19.5l-7.2 6.2v-6.2h-.1C10.4 29 9 27.4 9 25.5z" fill="#C8F04A" stroke-width="2.2" stroke-linejoin="round"/><path class="ink" d="M16.5 19h.1M22.3 19h.1M28 19h.1" fill="none" stroke-width="3.2" stroke-linecap="round"/></svg>
         <h3>Vain viestit</h3>
-        <p>Pidä yhteyttä kavereihin ilman syötettä ja tarinoita. Pelkkä viestilaatikko, ei mitään muuta.</p>
+        <p>Pidä Instagramissa yhteyttä kavereihin ilman syötettä ja tarinoita. Pelkkä viestilaatikko, ei mitään muuta.</p>
       </div>
       <div class="card">
         <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M5.5 22.5c4.5-7 10-10.5 16.5-10.5s12 3.5 16.5 10.5C34 29.5 28.5 33 22 33S10 29.5 5.5 22.5z" fill="#C8F04A" stroke-width="2.2" stroke-linejoin="round"/><path class="ink" d="M22 17.8c2.7 0 4.8 2.2 4.7 4.9-.1 2.6-2.2 4.6-4.8 4.6-2.6-.1-4.6-2.2-4.6-4.8.1-2.6 2.1-4.6 4.7-4.7z" fill="currentColor" stroke-width="0" style="color:var(--fg)"/><path class="ink" d="M9 37 35.5 8" fill="none" stroke-width="2.4" stroke-linecap="round"/></svg>
         <h3>Piilota, mitä haluat</h3>
-        <p>Tarinat, kommentit, uudelleenjulkaisut, videot tai koko syöte. Yksi kytkin kerrallaan.</p>
+        <p>Tarinat, kommentit, uudelleenjulkaisut, videot tai koko syöte. Jokaisella palvelulla on omat kytkimensä.</p>
       </div>
       <div class="card">
         <svg class="icon" viewBox="0 0 44 44" aria-hidden="true"><path class="ink" d="M22 7.5c-6 0-10 4.6-10 10.5v6.5L8.5 30.5h27L32 24.5V18c0-5.9-4-10.5-10-10.5z" fill="#C8F04A" stroke-width="2.2" stroke-linejoin="round"/><path class="ink" d="M18 34.5c.6 2 2.1 3 4 3s3.4-1 4-3" fill="none" stroke-width="2.2" stroke-linecap="round"/></svg>
         <h3>Viestimuistutukset</h3>
-        <p>kevytsome tarkistaa taustalla, onko sinulle uusia viestejä, ja kertoo lukemattomien keskustelujen määrän. Muistutus ei ole välitön, sillä iPhone päättää, milloin tarkistus tehdään.</p>
+        <p>kevytsome tarkistaa taustalla, onko sinulle uusia Instagram-viestejä, ja kertoo lukemattomien keskustelujen määrän. Muistutus ei ole välitön, sillä iPhone päättää, milloin tarkistus tehdään.</p>
       </div>
     </div>
   </div>
@@ -207,7 +286,7 @@
       <p>Meillä ei ole palvelinta, jonne mitään voisi lähettää. Emme näe, mitä katsot, emmekä haluakaan.</p>
       <p><a href="tietosuoja.html">Lue koko tietosuojaseloste</a></p>
     </div>
-    <div class="privacy-facts">
+    <div class="privacy-facts reveal">
       <div class="fact">
         <svg class="check" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 2.6c6 .2 10.4 4.6 10.3 10.6-.1 6-4.7 10.4-10.6 10.2C6.8 23.2 2.5 18.8 2.6 12.9 2.8 7 7.2 2.4 13 2.6z" fill="#C8F04A" stroke="#141414" stroke-width="1.8"/><path d="M8.2 13.6l3.4 3.3 6.8-7.6" fill="none" stroke="#141414" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div><h3>Ei palvelinta</h3><p>Asetuksesi ja käyttöaikasi tallentuvat vain puhelimeesi.</p></div>
@@ -231,12 +310,12 @@
 <!-- 6. Price -->
 <section id="hinta">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="eyebrow">Hinta</div>
       <h2>Ei mainoksia, joten hinta on rehellinen.</h2>
       <p>Kun et maksa katseellasi, maksat rahalla. Silloin sinä olet asiakas etkä tuote.</p>
     </div>
-    <div class="prices">
+    <div class="prices reveal">
       <div class="price">
         <h3>Kuukausi</h3>
         <div class="amount">4,99 € <small>/kk</small></div>
@@ -260,15 +339,15 @@
 <!-- 7. FAQ -->
 <section id="ukk">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="eyebrow">UKK</div>
       <h2>Usein kysyttyä</h2>
     </div>
     <div class="faq">
       <details>
-        <summary>Minkä somepalvelun kanssa kevytsome toimii?</summary>
-        <div><p>Tällä hetkellä Instagramin kanssa. kevytsome näyttää palvelun mobiiliverkkosivun omassa ikkunassaan ja jättää siitä pois koukuttavat osat.</p>
-        <p>kevytsome on itsenäinen sovellus, eikä se ole Metan tuote tai Metan yhteistyökumppani.</p></div>
+        <summary>Minkä somepalvelujen kanssa kevytsome toimii?</summary>
+        <div><p>Instagramin, Facebookin ja LinkedInin kanssa. kevytsome näyttää kunkin palvelun mobiiliverkkosivun omassa ikkunassaan ja jättää siitä pois koukuttavat osat.</p>
+        <p>kevytsome on itsenäinen sovellus, eikä se ole Metan tai LinkedInin tuote tai yhteistyökumppani.</p></div>
       </details>
       <details>
         <summary>Onko kirjautuminen turvallista?</summary>
@@ -277,6 +356,10 @@
       <details>
         <summary>Toimiiko tilini normaalisti?</summary>
         <div><p>Kyllä. Käytät omaa tiliäsi, joten tykkäykset, kommentit, viestit ja julkaisut näkyvät muille aivan kuten ennenkin. kevytsome vain jättää osan näkymistä pois sinun puhelimestasi.</p></div>
+      </details>
+      <details>
+        <summary>Toimivatko Facebookin viestit?</summary>
+        <div><p>Eivät. Facebookin verkkosivu ohjaa viestit Messenger-sovellukseen, joten kevytsome ei näytä niitä. Instagramin ja LinkedInin viestit toimivat.</p></div>
       </details>
       <details>
         <summary>Pitääkö alkuperäinen sovellus poistaa?</summary>
@@ -352,7 +435,7 @@
     </div>
     <p class="no-cookies">Tällä sivulla ei ole evästeitä. Ihan oikeasti.</p>
     <div class="fine">
-      <p>kevytsome on itsenäinen sovellus, eikä se ole Metan tuote.</p>
+      <p>kevytsome on itsenäinen sovellus, eikä se ole Metan tai LinkedInin tuote.</p>
       <p>© 2026 Välihömpsy · Y-tunnus 3490860-7</p>
     </div>
   </div>
